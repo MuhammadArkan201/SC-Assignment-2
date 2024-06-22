@@ -1,24 +1,37 @@
-/* Styles for the CashFlowForm component */
+/* Importing the font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Resetting the margin and padding for the body and html */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
 form {
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 400px;
-    margin: 0 auto;
+    width: 100%;
     padding: 2rem;
-    border: 1px solid #ccc;
+    border: 1px solid #e0e0e0;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    margin: 20px auto;
 }
 
 input, select {
     width: 100%;
-    padding: 0.5rem;
+    padding: 0.75rem;
     margin-bottom: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1rem;
+    box-sizing: border-box;
 }
 
 button {

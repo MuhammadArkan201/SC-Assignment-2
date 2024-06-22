@@ -1,11 +1,34 @@
-/* Styles for the Dashboard component */
+/* Importing the font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Resetting the margin and padding for the body and html */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    background: url('https://www.creditloan.com/media/best-credit-cards-for-fair-credit-0.png') no-repeat center center;
+    background-size: cover;
+}
+
+/* Applying flex styles to a container div */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+
 .dashboard-container {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 2rem;
-    background-color: #f9f9f9;
+    background-color: #ffffff;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 h2 {

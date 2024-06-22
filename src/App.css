@@ -1,20 +1,13 @@
+/* Importing the font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  font-family: 'Poppins', sans-serif;
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #0066cc;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -26,6 +19,7 @@
 
 .App-link {
   color: #61dafb;
+  text-decoration: none;
 }
 
 @keyframes App-logo-spin {

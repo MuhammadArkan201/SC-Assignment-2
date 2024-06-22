@@ -1,15 +1,37 @@
-/* Styles for the Login component */
+/* Importing the font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Resetting the margin and padding for the body and html */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: url('https://static.vecteezy.com/system/resources/previews/005/697/423/non_2x/3d-money-banknote-on-background-coin-online-payment-and-payment-concept-3d-holding-wallet-render-for-business-bank-finance-investment-money-saving-banknote-on-isolate-background-vector.jpg') no-repeat center center;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+}
+
 form {
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 400px;
-    margin: 0 auto;
+    width: 100%;
     padding: 2rem;
-    border: 1px solid #ccc;
+    border: 1px solid #e0e0e0;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
 }
 
 h2 {
@@ -19,11 +41,12 @@ h2 {
 
 input {
     width: 100%;
-    padding: 0.5rem;
+    padding: 0.75rem;
     margin-bottom: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1rem;
+    box-sizing: border-box;
 }
 
 button {
@@ -54,5 +77,22 @@ p a {
 }
 
 p a:hover {
+    text-decoration: underline;
+}
+
+.additional-links {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.additional-links a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.additional-links a:hover {
     text-decoration: underline;
 }

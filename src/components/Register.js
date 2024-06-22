@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { auth } from '../firebase';
 import { createUserWithEmailAndPassword } from "firebase/auth";
+import './Register.css';
 
 function Register() {
     const [email, setEmail] = useState('');
@@ -22,12 +23,27 @@ function Register() {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <h2>Register</h2>
-            <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
-            <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
-            <button type="submit">Register</button>
-        </form>
+        <div className="register-container">
+            <form onSubmit={handleSubmit}>
+                <h2>Register Your Account</h2>
+                <input
+                    type="email"
+                    placeholder="Email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                />
+                <input
+                    type="password"
+                    placeholder="Password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                />
+                <button type="submit">Register</button>
+                <p>
+                    Already have an account? <a href="/login">Login</a>
+                </p>
+            </form>
+        </div>
     );
 }
 

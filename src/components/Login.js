@@ -20,15 +20,28 @@ function Login() {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <h2>Login</h2>
-            <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
-            <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
-            <button type="submit">Login</button>
-            <p>
-                Don't have an account? <Link to="/register">Register</Link>
-            </p>
-        </form>
+        <div className="login-container">
+            <form onSubmit={handleSubmit}>
+                <h2>Login to Cash Flow App</h2>
+                <input
+                    type="email"
+                    placeholder="Email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                />
+                <input
+                    type="password"
+                    placeholder="Password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                />
+                <button type="submit">Login</button>
+                <div className="additional-links">
+                    <Link to="/forgot-password">Forgot Password?</Link>
+                    <Link to="/register">Don't have an account? Register</Link>
+                </div>
+            </form>
+        </div>
     );
 }
 
