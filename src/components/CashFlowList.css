@@ -60,7 +60,7 @@ ul {
     background-color: #c82333;
 }
 
-.update-button {
+.edit-button {
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 5px;
@@ -70,6 +70,6 @@ ul {
     transition: background-color 0.3s ease;
 }
 
-.update-button:hover {
+.edit-button:hover {
     background-color: #0056b3;
 }

@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { collection, query, where, getDocs, doc, deleteDoc, updateDoc } from "firebase/firestore";
+import { collection, query, where, getDocs, doc, deleteDoc } from "firebase/firestore";
 import { firestore } from '../firebase';
 import { useAuth } from '../authContext';
 import './CashFlowList.css';
 
-function CashFlowList() {
+function CashFlowList({ setEntryToEdit }) {
     const [entries, setEntries] = useState([]);
     const { currentUser } = useAuth();
 
@@ -35,16 +35,6 @@ function CashFlowList() {
         }
     };
 
-    const updateEntry = async (id, description, amount, type) => {
-        try {
-            await updateDoc(doc(firestore, 'cashflows', id), { description, amount, type });
-            alert('Entry updated');
-            setEntries(entries.map(entry => (entry.id === id ? { id, description, amount, type } : entry)));
-        } catch (error) {
-            console.error(error);
-        }
-    };
-
     return (
         <div className="cashflow-list-container">
             <h3>Cash Flow Entries</h3>
@@ -53,8 +43,8 @@ function CashFlowList() {
                     <li key={entry.id} className="entry-item">
                         <span>{entry.description}: {entry.amount} ({entry.type})</span>
                         <div className="entry-buttons">
+                            <button onClick={() => setEntryToEdit(entry)} className="edit-button">Edit</button>
                             <button onClick={() => deleteEntry(entry.id)} className="delete-button">Delete</button>
-                            <button onClick={() => updateEntry(entry.id, entry.description, entry.amount, entry.type)} className="update-button">Update</button>
                         </div>
                     </li>
                 ))}

@@ -11,6 +11,7 @@ function Dashboard() {
     const navigate = useNavigate();
     const { currentUser } = useAuth();
     const [entries, setEntries] = useState([]);
+    const [entryToEdit, setEntryToEdit] = useState(null);
 
     const handleLogout = async () => {
         try {
@@ -40,10 +41,10 @@ function Dashboard() {
 
     return (
         <div className="dashboard-container">
-            <h2>Dashboard</h2>
+            <h2>Cash Flow App Dashboard</h2>
             <button onClick={handleLogout} className="logout-button">Logout</button>
-            <CashFlowForm setEntries={setEntries} />
-            <CashFlowList entries={entries} setEntries={setEntries} />
+            <CashFlowForm setEntries={setEntries} entryToEdit={entryToEdit} setEntryToEdit={setEntryToEdit} />
+            <CashFlowList entries={entries} setEntryToEdit={setEntryToEdit} />
         </div>
     );
 }
